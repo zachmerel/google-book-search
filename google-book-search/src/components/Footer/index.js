@@ -8,7 +8,7 @@ const Footer = () => {
     <footer>
       <hr />
       <p className="pull-right">
-        <i class="fab fa-react" /> Built using React.js
+        <i className="fab fa-react" /> Built using React.js
       </p>
     </footer>
   );
