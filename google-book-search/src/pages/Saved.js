@@ -49,7 +49,7 @@ class Saved extends Component {
         </Row>
         <Row>
           <Col size="md-12">
-            <Card title="Saved Books" icon="download">
+            <Card title="Saved Books" icon="save">
             {/* if books array is not empty */}
               {this.state.books.length ? (
                 <List>
