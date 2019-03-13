@@ -3,7 +3,7 @@ import React from "react";
 import "./style.css";
 
 //dumb card function that takes in the cards, icon, title and children depending which cards is being rendered
-const Card = ({ icon, title, children }) => {
+let Card = ({ icon, title, children }) => {
   return (
     <div className="card mt-4">
       <div className="card-header">

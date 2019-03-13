@@ -30,11 +30,14 @@ class Home extends Component {
       //injects whatever the user input was for the request
     API.getBooks(this.state.q)
     //when it comes back it sets the stte of books to the data that was returned with the call
-      .then(res =>
-        this.setState({
-          books: res.data
+      .then(res => {
+       console.log(res.data.items);
+        this.setState({ 
+          books: res.data.items
         })
-      )
+        console.log(this.state)
+      }
+      ) 
       //a catch is set here to set the state of books back to blank and the message to tell the user there was nothing returned 
       //from the API call
       .catch(() =>
@@ -44,8 +47,9 @@ class Home extends Component {
         })
       );
   };
-  // this will prevents the default of the browser from occuring
+  // this will prevents the default of the browser from occuring and should call the get boks method above to call to api call
   handleFormSubmit = event => {
+    console.log("handFormSubmit")
     event.preventDefault();
     this.getBooks();
   };
@@ -95,7 +99,7 @@ class Home extends Component {
         <Row>
           <Col size="md-12">
             <Card title="Results">
-            {/* if there are any books you will know because books length will exist */}
+            {/* if there are any books you will know because books length will exist then you inject a list component if it does*/}
               {this.state.books.length ? (
                 <List>
                     {/* loop through the books array and assign each prop to the book component */}

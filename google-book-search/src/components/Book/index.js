@@ -5,7 +5,7 @@ import { Row, Col } from "../Grid";
 import "./style.css";
 
 //creates a dumb book function that takes in the below parameters and elements
-const Book = ({
+let Book = ({
   title,
   subtitle,
   authors,

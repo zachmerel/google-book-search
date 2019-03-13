@@ -2,6 +2,7 @@
 import React from "react";
 import "./style.css";
 
+
 //this function returns the form where you search for your book, it takes in the books title as well as the methods
 //to get the users input (book title) and the method when the submit button is clicked
 const Form = ({ q, handleInputChange, handleFormSubmit }) => {
