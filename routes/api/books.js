@@ -8,7 +8,7 @@ router.route("/")
 
 // Matches with "/api/books/saved"
 router
-  .route("/saved")
+  .route("/:id")
   .get(booksController.findById)
   .put(booksController.update)
   .delete(booksController.remove);
