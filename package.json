@@ -1,5 +1,5 @@
 {
-  "name": "google-book-search",
+  "name": "mern",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -13,11 +13,6 @@
     "build": "cd client && npm run build",
     "heroku-postbuild": "npm run build"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/zachmerel/google-book-search.git"
-  },
-  "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
@@ -26,13 +21,9 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
-    "express": "^4.16.4",
+    "express": "^4.16.3",
     "if-env": "^1.0.4",
-    "mongoose": "^5.4.19",
-    "moongoose": "0.0.5"
-  },
-  "bugs": {
-    "url": "https://github.com/zachmerel/google-book-search/issues"
-  },
-  "homepage": "https://github.com/zachmerel/google-book-search#readme"
+    "mongoose": "^5.3.16",
+    "react-router-dom": "^4.3.1"
+  }
 }
