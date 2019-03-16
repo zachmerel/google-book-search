@@ -41,10 +41,10 @@ class Nav extends Component {
   //rendering the nav bar (bootstrap component)
   render() {
     return (
-      <nav className="navbar navbar-expand-lg navbar-light bg-light mb-2">
+      <nav className="navbar navbar-expand-lg navbar-light mb-2">
       {/* nav brand so when clicked brings you to the home page, see api.js file for path */}
         <Link className="navbar-brand" to="/">
-          Google Books
+          Google Bookshelf
         </Link>
 
         <button
