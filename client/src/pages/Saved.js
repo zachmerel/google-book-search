@@ -30,8 +30,8 @@ class Saved extends Component {
       .catch(err => console.log(err));
   };
 //method to call the delete book API call and then run saved books call to clear it out of books array
-  handleBookDelete = id => {
-    API.deleteBook(id).then(res => this.getSavedBooks());
+  handleBookDelete = _id => {
+    API.deleteBook(_id).then(res => this.getSavedBooks());
   };
 
   render() {
@@ -59,9 +59,9 @@ class Saved extends Component {
                       key={book._id}
                       title={book.title}
                       subtitle={book.subtitle}
-                      link={book.link}
+                      url={book.link ? book.link : "https://via.placeholder.com/128x124"}
                       authors={book.authors.join(", ")}
-                      description={book.description}
+                      description={book.description ? book.description: "No description available"}
                       image={book.image}
                       Button={() => (
                         <button

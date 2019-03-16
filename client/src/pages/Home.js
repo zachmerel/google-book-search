@@ -28,7 +28,7 @@ class Home extends Component {
   //this grabs the api call from API.js in utils to 
   getBooks = () => {
       //injects whatever the user input was for the request
-    API.getBooks(this.state.q)
+    API.callgoogle(this.state.q)
     //when it comes back it sets the stte of books to the data that was returned with the call
       .then(res => {
        console.log(res.data.items);
@@ -108,9 +108,9 @@ class Home extends Component {
                       key={book.id}
                       title={book.volumeInfo.title}
                       subtitle={book.volumeInfo.subtitle}
-                      link={book.volumeInfo.infoLink}
+                      link={book.volumeInfo.infoLink ? book.volumeInfo.infoLink: "https://via.placeholder.com/128x124"}
                       authors={book.volumeInfo.authors.join(", ")}
-                      description={book.volumeInfo.description}
+                      description={book.volumeInfo.description ? book.volumeInfo.description : "No description available"}
                       image={book.volumeInfo.imageLinks.thumbnail}
                       Button={() => (
                         <button
