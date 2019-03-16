@@ -60,7 +60,7 @@ class Saved extends Component {
                       title={book.title}
                       subtitle={book.subtitle}
                       url={book.link ? book.link : "https://via.placeholder.com/128x124"}
-                      authors={book.authors.join(", ")}
+                      authors={book.authors}
                       description={book.description ? book.description: "No description available"}
                       image={book.image}
                       Button={() => (
