@@ -72,7 +72,6 @@ class Home extends Component {
       authors: book.volumeInfo.authors,
       description: book.volumeInfo.description,
       image: book.volumeInfo.imageLinks.thumbnail
-      //? need this part explained?
     }).then(() => this.getBooks());
   };
   //renders the layout of the home page
